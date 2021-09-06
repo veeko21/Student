@@ -22,8 +22,7 @@ public class Student {
     private String name;
     private String email;
     private LocalDate dob;
-
-    @Transient
+    
     private int age;
 
     public Student() {}
@@ -75,10 +74,6 @@ public class Student {
 
     public int getAge() {
         return Period.between(this.dob, LocalDate.now()).getYears();
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     @Override
